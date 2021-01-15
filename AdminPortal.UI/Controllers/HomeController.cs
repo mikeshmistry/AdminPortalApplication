@@ -1,4 +1,6 @@
 ﻿using AdminPortal.UI.Models;
+using AdminPortal.UI.Models.SecurityModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,6 +25,7 @@ namespace AdminPortal.UI.Controllers
             return View();
         }
 
+        [Authorize()]
         public IActionResult Privacy()
         {
             return View();

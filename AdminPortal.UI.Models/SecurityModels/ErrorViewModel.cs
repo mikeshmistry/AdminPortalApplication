@@ -1,7 +1,8 @@
-using System;
-
-namespace AdminPortal.UI.Models
+namespace AdminPortal.UI.Models.SecurityModels
 {
+    /// <summary>
+    /// Model class for error messages
+    /// </summary>
     public class ErrorViewModel
     {
         public string RequestId { get; set; }

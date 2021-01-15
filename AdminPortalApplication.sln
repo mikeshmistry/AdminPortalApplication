@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPortal.UI", "AdminPortal.UI\AdminPortal.UI.csproj", "{4857C317-ACEE-49AB-9F7E-092542C9CC8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPortal.UI", "AdminPortal.UI\AdminPortal.UI.csproj", "{4857C317-ACEE-49AB-9F7E-092542C9CC8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPortal.UI.Models", "AdminPortal.UI.Models\AdminPortal.UI.Models.csproj", "{E9F2FF93-BE1E-4E1D-A8FD-8CA90CA11717}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPortal.UI.Models", "AdminPortal.UI.Models\AdminPortal.UI.Models.csproj", "{E9F2FF93-BE1E-4E1D-A8FD-8CA90CA11717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPortal.BL", "AdminPortal.BL\AdminPortal.BL.csproj", "{5B699144-9918-4F34-B65B-A3BDEDC69031}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPortal.BL", "AdminPortal.BL\AdminPortal.BL.csproj", "{5B699144-9918-4F34-B65B-A3BDEDC69031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPortal.Security", "AdminPortal.Security\AdminPortal.Security.csproj", "{20ECEAF3-5933-4E89-8F46-2852499A5490}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5B699144-9918-4F34-B65B-A3BDEDC69031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B699144-9918-4F34-B65B-A3BDEDC69031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B699144-9918-4F34-B65B-A3BDEDC69031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20ECEAF3-5933-4E89-8F46-2852499A5490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20ECEAF3-5933-4E89-8F46-2852499A5490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20ECEAF3-5933-4E89-8F46-2852499A5490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20ECEAF3-5933-4E89-8F46-2852499A5490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
