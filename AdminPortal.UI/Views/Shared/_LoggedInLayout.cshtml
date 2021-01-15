@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@* 
+This is the Main Layout for the logged in administrator.
+Used to navigate to other parts of the site
+*@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,10 +24,19 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ManageStudent" asp-action="Index">Manage Students</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ManageTeacher" asp-action="Index">Manage Teachers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ManageCourse" asp-action="Index">Manage Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="StudentEnrollment" asp-action="Index">Enroll Student To Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TeacherEnrollment" asp-action="Index">Assign Teacher To Course</a>
                         </li>
                     </ul>
                 </div>
