@@ -10,14 +10,23 @@ namespace AdminPortal.UI.Models.SecurityModels
     /// </summary>
     public class UserLoginModel
     {
+        /// <summary>
+        /// UserName
+        /// </summary>
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string UserName { get; set; }
 
+        
+        /// <summary>
+        /// Password 
+        /// </summary>
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// Remember Me
+        /// </summary>
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
