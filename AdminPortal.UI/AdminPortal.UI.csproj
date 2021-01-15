@@ -19,8 +19,4 @@
     <ProjectReference Include="..\AdminPortal.UI.Models\AdminPortal.UI.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>
