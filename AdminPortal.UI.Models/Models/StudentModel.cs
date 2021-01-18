@@ -9,7 +9,7 @@ namespace AdminPortal.UI.Models.Models
     /// Model class to represent a student 
     /// </summary>
     public class StudentModel
-    {
+    { 
         #region Properties 
         /// <summary>
         /// StudentId 
@@ -20,15 +20,15 @@ namespace AdminPortal.UI.Models.Models
         /// FirstName of the student this is a required field
         /// </summary>
         [Required]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         /// <summary>
         /// LastName of the student this is a required field
         /// </summary>
         [Required]
+        [Display(Name ="Last Name")]
         public string LastName { get; set; }
-
-
 
         /// <summary>
         /// List of Grades for the student
@@ -40,6 +40,7 @@ namespace AdminPortal.UI.Models.Models
         /// </summary>
         public List<CourseModel> Courses { get; set; }
 
+       
 
         #endregion
 

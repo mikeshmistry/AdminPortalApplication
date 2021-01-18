@@ -8,7 +8,7 @@ namespace AdminPortal.UI.Models.Models
     /// <summary>
     /// Model class to represent a teacher
     /// </summary>
-   public class TeacherModel
+    public class TeacherModel
     {
         #region Properties 
 
@@ -21,12 +21,14 @@ namespace AdminPortal.UI.Models.Models
         /// FirstName of the teacher this is a required field
         /// </summary>
         [Required]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
         /// <summary>
         /// LastName of the teacher this is a required field
         /// </summary>
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
      
 
