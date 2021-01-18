@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace AdminPortal.Security.Application
 {
 
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
