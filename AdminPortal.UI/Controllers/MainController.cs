@@ -18,13 +18,13 @@ namespace AdminPortal.UI.Controllers
         #region Action Methods
 
         /// <summary>
-        /// Action method for main
+        /// Get action method for main
         /// </summary>
-        /// <returns>the main view for the logged in user</returns>
+        /// <returns>The main view for the logged in user</returns>
         public IActionResult Index()
         {
             return View("Views/Main.cshtml");
-
+           
         }
 
         #endregion

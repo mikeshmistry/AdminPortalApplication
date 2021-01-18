@@ -10,11 +10,15 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AdminPortal.BL\AdminPortal.BL.csproj" />
     <ProjectReference Include="..\AdminPortal.Security\AdminPortal.Security.csproj" />
     <ProjectReference Include="..\AdminPortal.UI.Models\AdminPortal.UI.Models.csproj" />
   </ItemGroup>

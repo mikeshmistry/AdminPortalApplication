@@ -1,10 +1,62 @@
-﻿@* 
-View to manage courses the controller is ManageCourseController    
+﻿@*
+    View for managing courses the controller is ManageCourseController
 *@
 
+
+@using AdminPortal.UI.Models.Models;
+
+@model IEnumerable<CourseModel>
+
 @{
-    ViewData["Title"] = "ManageCourses";
+    ViewData["Title"] = "Manage Course";
     Layout = "~/Views/Shared/_LoggedInLayout.cshtml";
 }
 
-<h1>Manage Courses</h1>
+
+
+<h4>Manage Course</h4>
+<br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                <button type="button" onclick="location.href='@Url.Action("AddEditCourse", "ManageCourse")'" class="btn btn-primary">Add Course</button>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <button type="button" onclick="location.href='@Url.Action("AddEditCourse", "ManageCourse", new { id = item.CourseId })'" class="btn btn-primary">Edit</button>
+                        <button type="button" onclick="location.href='@Url.Action("DeleteCourse", "ManageCourse", new { id = item.CourseId })'" class="btn btn-primary">Delete</button>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>
+                    No Data
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

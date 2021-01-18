@@ -77,7 +77,7 @@ namespace AdminPortal.UI.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Index", "MainController");
+                    return RedirectToAction("Index", "Main");
                 }
                 if (result.IsLockedOut)
                 {
