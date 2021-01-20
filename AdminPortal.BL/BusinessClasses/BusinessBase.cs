@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DatabaseContext;
+﻿using DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace AdminPortal.BL

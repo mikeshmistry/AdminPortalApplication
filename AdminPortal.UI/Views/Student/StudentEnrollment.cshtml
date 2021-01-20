@@ -1,9 +1,43 @@
 ﻿@*
     View for assigning student to courses the controller is StudentEnrollmentController
 *@
+
+@using AdminPortal.UI.Models.Models;
+@model StudentEnrollmentModel
+
 @{
     ViewData["Title"] = "ManageTeachers";
     Layout = "~/Views/Shared/_LoggedInLayout.cshtml";
 }
 
-<h1>Assign Student To Course</h1>
+<h4>Student</h4>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="EnrollStudent">
+            <div class="form-group">
+                <label asp-for="Students" class="control-label"></label>
+                <select asp-for="StudentId" asp-items="@(new SelectList(Model.Students,"StudentId","FullName"))" class="form-control"></select>
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Courses" class="control-label"></label>
+                <select asp-for="CourseId" asp-items="@(new SelectList(Model.Courses,"CourseId","Name"))" class="form-control"></select>
+                <span asp-validation-for="CourseId"  class="text-danger"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

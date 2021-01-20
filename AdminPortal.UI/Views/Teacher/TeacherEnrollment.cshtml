@@ -1,9 +1,50 @@
 ﻿@*
-    View for assigning teachers to a course the controller is TeacherEnrollmentController
+    View for assigning student to courses the controller is StudentEnrollmentController
 *@
+
+@using AdminPortal.UI.Models.Models;
+@model TeacherEnrollmentModel
+
 @{
     ViewData["Title"] = "ManageTeachers";
     Layout = "~/Views/Shared/_LoggedInLayout.cshtml";
 }
 
-<h1>Assign Teacher To Course</h1>
+<h4>Teacher Enrollment</h4>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="EnrollTeacher">
+            <div class="form-group">
+                <label asp-for="Teachers" class="control-label"></label>
+                <select asp-for="TeacherId" asp-items="@(new SelectList(Model.Teachers,"TeacherId","FullName"))" class="form-control"></select>
+                <span asp-validation-for="TeacherId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Courses" class="control-label"></label>
+                <select asp-for="CourseId" asp-items="@(new SelectList(Model.Courses,"CourseId","Name"))" class="form-control"></select>
+                <span asp-validation-for="CourseId" class="text-danger"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+@if (Model.Error == true)
+{
+<p>Something went wrong</p>
+}
+else 
+{
+ <p></p>
+}
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

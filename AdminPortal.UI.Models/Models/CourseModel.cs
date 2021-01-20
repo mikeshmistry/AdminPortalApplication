@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AdminPortal.UI.Models.Models
 {
     /// <summary>
     /// Model class to represent a course
     /// </summary>
-    public class CourseModel
+    public class CourseModel : ModelBase
     {
 
         #region Properties

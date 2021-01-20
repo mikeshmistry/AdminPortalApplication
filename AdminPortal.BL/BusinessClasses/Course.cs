@@ -3,7 +3,6 @@ using Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AdminPortal.BL.BusinessClasses
@@ -11,7 +10,7 @@ namespace AdminPortal.BL.BusinessClasses
     /// <summary>
     /// Business class to represent a course
     /// </summary>
-   public class Course : BusinessBase
+    public class Course : BusinessBase
     {
 
         #region Field
@@ -19,7 +18,7 @@ namespace AdminPortal.BL.BusinessClasses
         /// <summary>
         /// Field for the course repository 
         /// </summary>
-        private CourseRepository courseRepository; 
+        private readonly CourseRepository courseRepository; 
         
         #endregion
 
@@ -163,7 +162,53 @@ namespace AdminPortal.BL.BusinessClasses
 
             }
 
+            
             return courseList;
+        }
+
+
+        /// <summary>
+        /// Method to enroll a student into the course
+        /// </summary>
+        /// <param name="studentId">The studentId of the student</param>
+        /// <param name="courseId">The courseId of the student</param>
+        /// <returns>True if the student was enrolled in the course</returns>
+        public async Task<bool> EnrollStudentInCourseAysnc(int studentId,int courseId)
+        {
+            var added = false;
+            try
+            {
+                 added = await Task.Run(() => courseRepository.EnrollStudentIntoCourse(studentId, courseId));
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+            return added;
+        }
+
+        /// <summary>
+        /// Method to assign a teacher to a course
+        /// </summary>
+        /// <param name="teacherId">The teacher id</param>
+        /// <param name="courseId">The course id</param>
+        /// <returns>True if the teacher was assigned to the course</returns>
+        public async Task<bool> AssignTeacherToCourseAsync(int teacherId,int courseId)
+        {
+            var added = false;
+            
+            try
+            {
+                added = await Task.Run(() => courseRepository.AssignTeacherToCourse(teacherId, courseId));
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+
+            return added;
         }
 
         #endregion

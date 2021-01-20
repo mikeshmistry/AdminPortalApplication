@@ -1,11 +1,9 @@
 ﻿using Repositories;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using AdminPortal.UI.Models.Models;
-using Entities;
 using System.Threading.Tasks;
 using System.Linq;
+using AdminPortal.UI.Models.Models;
 
 namespace AdminPortal.BL.BusinessClasses
 {
@@ -19,7 +17,8 @@ namespace AdminPortal.BL.BusinessClasses
         /// <summary>
         /// Field for the repository 
         /// </summary>
-        private StudentRepository studentRepository;
+        private readonly StudentRepository studentRepository;
+
         #endregion
 
         #region Constructor
@@ -148,11 +147,12 @@ namespace AdminPortal.BL.BusinessClasses
                 var allStudents = await Task.Run(() => studentRepository.GetAll());
 
                 studentList = (from student in allStudents
-                              select new StudentModel ()
+                              select new StudentModel()
                               {
                                   StudentId = student.StudentId,
                                   FirstName = student.FirstName,
-                                  LastName = student.LastName
+                                  LastName = student.LastName,
+                                  FullName = student.FirstName + " " + student.LastName
 
                               }).ToList<StudentModel>();
 
@@ -162,6 +162,8 @@ namespace AdminPortal.BL.BusinessClasses
             {
 
             }
+
+            
 
             return studentList;
         }

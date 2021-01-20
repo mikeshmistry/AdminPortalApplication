@@ -3,9 +3,6 @@ using AdminPortal.UI.Models.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace AdminPortal.UI.Controllers
@@ -96,7 +93,7 @@ namespace AdminPortal.UI.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            return View(nameof(Index),teacher);
+            return View(nameof(Index), teacher);
         }
 
         /// <summary>

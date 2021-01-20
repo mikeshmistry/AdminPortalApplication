@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPortal.UI.Models", "Ad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPortal.BL", "AdminPortal.BL\AdminPortal.BL.csproj", "{5B699144-9918-4F34-B65B-A3BDEDC69031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPortal.Security", "AdminPortal.Security\AdminPortal.Security.csproj", "{20ECEAF3-5933-4E89-8F46-2852499A5490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminPortal.Security", "AdminPortal.Security\AdminPortal.Security.csproj", "{20ECEAF3-5933-4E89-8F46-2852499A5490}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

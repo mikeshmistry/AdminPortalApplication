@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace AdminPortal.UI.Models.Models
 {
@@ -30,7 +28,11 @@ namespace AdminPortal.UI.Models.Models
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-     
+
+        /// <summary>
+        /// Full name of the teacher
+        /// </summary>
+        public string FullName { get; set; }
 
         /// <summary>
         /// List of courses that the teacher teachers

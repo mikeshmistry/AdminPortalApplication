@@ -1,10 +1,8 @@
 ﻿using AdminPortal.UI.Models.Models;
-using DatabaseContext;
 using Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AdminPortal.BL.BusinessClasses
@@ -20,7 +18,7 @@ namespace AdminPortal.BL.BusinessClasses
         /// <summary>
         /// Field for the repository 
         /// </summary>
-        private TeacherRepository teacherRepository;
+        private readonly TeacherRepository teacherRepository;
 
         #endregion
 
@@ -153,7 +151,8 @@ namespace AdminPortal.BL.BusinessClasses
                                {
                                    TeacherId = teacher.TeacherId,
                                    FirstName = teacher.FirstName,
-                                   LastName = teacher.LastName
+                                   LastName = teacher.LastName,
+                                   FullName = teacher.FirstName + " " + teacher.LastName 
 
                                }).ToList<TeacherModel>();
 

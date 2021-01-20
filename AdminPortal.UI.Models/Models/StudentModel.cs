@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace AdminPortal.UI.Models.Models
 {
@@ -11,6 +9,7 @@ namespace AdminPortal.UI.Models.Models
     public class StudentModel
     { 
         #region Properties 
+
         /// <summary>
         /// StudentId 
         /// </summary>
@@ -30,19 +29,27 @@ namespace AdminPortal.UI.Models.Models
         [Display(Name ="Last Name")]
         public string LastName { get; set; }
 
-        /// <summary>
-        /// List of Grades for the student
-        /// </summary>
-        public List<GradeModel> Grades { get; set; }
+       /// <summary>
+       /// Field for the combination of firstName and LastName 
+       /// </summary>
+        public string FullName{ get; set; }
+
 
         /// <summary>
         /// List of Course for the student 
         /// </summary>
         public List<CourseModel> Courses { get; set; }
 
-       
-
         #endregion
+
+        #region Default Constructor
+
+        public StudentModel()
+        {
+
+        }
+
+        #endregion 
 
     }
 }

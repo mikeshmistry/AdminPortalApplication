@@ -1,12 +1,9 @@
 ﻿using AdminPortal.UI.Models.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using AdminPortal.BL.BusinessClasses;
 using Microsoft.Extensions.Logging;
+using AdminPortal.BL.BusinessClasses;
 
 namespace AdminPortal.UI.Controllers
 {
@@ -34,7 +31,7 @@ namespace AdminPortal.UI.Controllers
 
         #region Constructors
 
-       
+
 
         /// <summary>
         /// Constructor that takes in a logger 
@@ -47,7 +44,7 @@ namespace AdminPortal.UI.Controllers
         }
 
         #endregion
- 
+
 
         /// <summary>
         /// Get action to the index page of manage students
@@ -67,7 +64,7 @@ namespace AdminPortal.UI.Controllers
         {
             //add new student
             if (id == 0)
-                return View("Views/Student/AddEditStudent.cshtml",new StudentModel());
+                return View("Views/Student/AddEditStudent.cshtml", new StudentModel());
             else
             {
                 //edit
@@ -85,19 +82,20 @@ namespace AdminPortal.UI.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddEditStudent([Bind("StudentId,FirstName,LastName")] StudentModel student)
         {
+
             if (ModelState.IsValid)
             {
                 //add to the database
                 if (student.StudentId == 0)
-                 await studentBusinessObject.AddStudentAsync(student);
+                    await studentBusinessObject.AddStudentAsync(student);
 
                 //edit
                 else
-                  await studentBusinessObject.UpdateStudentAsync(student);
+                    await studentBusinessObject.UpdateStudentAsync(student);
 
                 return RedirectToAction(nameof(Index));
             }
-            return View(nameof(Index),student);
+            return View(nameof(Index), student);
         }
 
         /// <summary>

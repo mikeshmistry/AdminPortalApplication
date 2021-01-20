@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AdminPortal.UI.Controllers
 {
@@ -23,7 +19,7 @@ namespace AdminPortal.UI.Controllers
         /// <returns>The main view for the logged in user</returns>
         public IActionResult Index()
         {
-            return View("Views/Main.cshtml");
+            return RedirectToAction("Index", "ManageStudent");
            
         }
 
