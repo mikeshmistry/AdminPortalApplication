@@ -22,6 +22,7 @@ namespace AdminPortal.UI.Areas.Identity.Pages.Account
         private readonly ILogger<LoginModel> _logger;
 
         #endregion 
+
         public LoginModel(SignInManager<ApplicationUser> signInManager, 
             ILogger<LoginModel> logger,
             UserManager<ApplicationUser> userManager)
