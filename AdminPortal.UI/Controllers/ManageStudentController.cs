@@ -31,8 +31,6 @@ namespace AdminPortal.UI.Controllers
 
         #region Constructors
 
-
-
         /// <summary>
         /// Constructor that takes in a logger 
         /// </summary>

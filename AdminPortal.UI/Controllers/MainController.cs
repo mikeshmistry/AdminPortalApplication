@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
 
 namespace AdminPortal.UI.Controllers
 {
@@ -10,6 +12,21 @@ namespace AdminPortal.UI.Controllers
     [Authorize]
     public class MainController : Controller
     {
+        #region Fields
+
+        private readonly ILogger<MainController> _logger;
+       
+
+        #endregion
+
+        #region Constructors
+
+        public MainController(ILogger<MainController> logger)
+        {
+            _logger = logger;
+        }
+
+        #endregion 
 
         #region Action Methods
 
