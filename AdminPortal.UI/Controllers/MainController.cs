@@ -8,7 +8,7 @@ namespace AdminPortal.UI.Controllers
     /// <summary>
     /// Controller For the Logged in administrator
     /// </summary>
-    [AutoValidateAntiforgeryToken]
+    
     [Authorize]
     public class MainController : Controller
     {

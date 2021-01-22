@@ -10,7 +10,7 @@ namespace AdminPortal.UI.Controllers
     /// <summary>
     /// Controller to manage courses
     /// </summary>
-    [AutoValidateAntiforgeryToken]
+   
     [Authorize]
     public class ManageCourseController : Controller
     {
@@ -49,6 +49,8 @@ namespace AdminPortal.UI.Controllers
         /// Get action to the index page of manage courses
         /// </summary>
         /// <returns>A view to the manage course page</returns>
+      
+       
         public async Task<IActionResult> Index()
         {
             return View("Views/Course/ManageCourse.cshtml",await courseBusinessObject.GetAllCourseAsync());

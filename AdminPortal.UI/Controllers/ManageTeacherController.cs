@@ -10,7 +10,6 @@ namespace AdminPortal.UI.Controllers
     /// <summary>
     /// Controller to manage teachers
     /// </summary>
-    [AutoValidateAntiforgeryToken]
     [Authorize]
     public class ManageTeacherController : Controller
     {

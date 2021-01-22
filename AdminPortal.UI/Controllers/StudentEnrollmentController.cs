@@ -10,7 +10,6 @@ namespace AdminPortal.UI.Controllers
     /// <summary>
     /// Class to manage student enrollment
     /// </summary>
-    [AutoValidateAntiforgeryToken]
     [Authorize]
     public class StudentEnrollmentController : Controller
     {
