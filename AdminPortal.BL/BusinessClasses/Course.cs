@@ -201,6 +201,7 @@ namespace AdminPortal.BL.BusinessClasses
             try
             {
                 added = await Task.Run(() => courseRepository.AssignTeacherToCourse(teacherId, courseId));
+            
             }
 
             catch (Exception ex)
