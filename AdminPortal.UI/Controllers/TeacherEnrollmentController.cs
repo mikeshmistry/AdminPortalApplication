@@ -74,17 +74,13 @@ namespace AdminPortal.UI.Controllers
             var result = false;
             if (ModelState.IsValid)
             {
-                var error = new TeacherEnrollmentModel();
-                error = await PopulateTeacherAndCourseListAsync();
+                //var error = new TeacherEnrollmentModel();
+                //error = await PopulateTeacherAndCourseListAsync();
                 
 
                 result = await courseBusinessObject.AssignTeacherToCourseAsync(teacher.TeacherId, teacher.CourseId);
-                if (result == false)
-                {
-
-                    error.Error = true;
-                }
-                return View("Views/Teacher/TeacherEnrollment.cshtml", error);
+               
+                //return View("Views/Teacher/TeacherEnrollment.cshtml", error);
             }
             return RedirectToAction(nameof(Index));
         }

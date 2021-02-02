@@ -7,7 +7,7 @@ namespace AdminPortal.UI.Models.Models
     /// <summary>
     /// Model class for assigning a course to a teacher
     /// </summary>
-    public class TeacherEnrollmentModel : ModelBase
+    public class TeacherEnrollmentModel 
     {
         /// <summary>
         /// Selected TeacherId

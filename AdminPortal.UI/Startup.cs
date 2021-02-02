@@ -62,7 +62,7 @@ namespace AdminPortal.UI
             services.Configure<IdentityOptions>(ConfigurationOptions.UserOptions);
 
             //Configure cooking options
-            services.ConfigureApplicationCookie(ConfigurationOptions.CookieOptions);
+          //  services.ConfigureApplicationCookie(ConfigurationOptions.CookieOptions);
 
         }
 
@@ -90,6 +90,7 @@ namespace AdminPortal.UI
 
             app.UseAuthentication();
             app.UseAuthorization();
+           // app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {
